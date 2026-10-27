@@ -5,11 +5,18 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Home from "./pages/Home";
 import Contact from "./pages/Contact";
 import Cart from "./pages/Cart";
+import Footer from "./components/Footer";
+import { UpdateFollower } from "react-mouse-follower";
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Home />,
+    element: (
+      <>
+        <Home />
+        <Footer />
+      </>
+    ),
   },
   {
     path: "/contact",
@@ -24,7 +31,15 @@ const router = createBrowserRouter([
 function App() {
   return (
     <main className="overflow-hidden">
-      <RouterProvider router={router} />
+      <UpdateFollower
+        mouseOptions={{
+          backgroundColor: "white",
+          zIndex: 10,
+          followSpeed: 1.5,
+        }}
+      >
+        <RouterProvider router={router} />
+      </UpdateFollower>
     </main>
   );
 }
