@@ -2,7 +2,6 @@ import React from "react";
 import { FaUserCircle } from "react-icons/fa";
 import { NavbarMenu } from "./Navbar";
 import { Link } from "react-router-dom";
-import { Heart } from "lucide-react";
 
 function ResponsiveMenu({ toggleMenu, setToggleMenu }) {
   return (
