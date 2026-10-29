@@ -29,7 +29,7 @@ export const NavbarMenu = [
     link: "/kids",
   },
   {
-    id: 1,
+    id: 5,
     title: "Contact",
     link: "/contact",
   },

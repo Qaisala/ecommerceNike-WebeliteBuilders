@@ -16,7 +16,9 @@ function Navbar2() {
       <div className="container flex justify-between items-center">
         {/* logo section  */}
         <div>
-          <img src={Logo} alt="" className="max-w-25" />
+          <Link to="/" className="inline-block">
+            <img src={Logo} alt="" className="max-w-25" />
+          </Link>
         </div>
         {/* menu section */}
         <div className="hidden md:block">
