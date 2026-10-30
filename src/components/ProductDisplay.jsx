@@ -9,7 +9,7 @@ function ProductDisplay(props) {
 
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 my-20 md:gap-10 px-6 md:px-0">
-      {/* left content */}
+      {/* product images - left content */}
       <div className="flex md:1/2 gap-4">
         <div className="flex flex-col gap-4 md:h-125">
           <img
@@ -42,8 +42,8 @@ function ProductDisplay(props) {
         </div>
       </div>
 
-      {/* right content */}
-      <div className="flex md:1/2 flex-col mt-8 md:mt-0">
+      {/* product info - right content */}
+      <div className="flex flex-col md:1/2 mt-8 md:mt-0">
         <h1 className="text-[#3d3d3d] text-4xl font-bold">{product.name}</h1>
         <div className="flex items-center gap-1 text-[#1c1c1c] text-lg mt-4">
           <Star fill="#138695" />

@@ -1,14 +1,11 @@
 import React from "react";
 import Navbar from "./components/Navbar";
-import Hero from "./components/Hero";
+import Hero from "./components/Hero"; 
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import Home from "./pages/Home";
 import Contact from "./pages/Contact";
 import Cart from "./pages/Cart";
 import Footer from "./components/Footer";
-import { UpdateFollower } from "react-mouse-follower";
 import ProductList from "./components/ProductList";
-import Navbar2 from "./components/Navbar2";
 import SingleProduct from "./components/SingleProduct";
 
 const router = createBrowserRouter([
@@ -16,7 +13,9 @@ const router = createBrowserRouter([
     path: "/",
     element: (
       <>
-        <Home />
+        {/* Note: Hero already contains its own Navbar inside its motion section 
+            to handle the dynamic background colors when switching shoes! */}
+        <Hero />
         <Footer />
       </>
     ),
@@ -25,7 +24,7 @@ const router = createBrowserRouter([
     path: "/men",
     element: (
       <>
-        <Navbar2 />
+        <Navbar />
         <ProductList category="men" />
         <Footer />
       </>
@@ -35,7 +34,7 @@ const router = createBrowserRouter([
     path: "/women",
     element: (
       <>
-        <Navbar2 />
+        <Navbar />
         <ProductList category="women" />
         <Footer />
       </>
@@ -45,7 +44,7 @@ const router = createBrowserRouter([
     path: "/kids",
     element: (
       <>
-        <Navbar2 />
+        <Navbar />
         <ProductList category="kids" />
         <Footer />
       </>
@@ -55,7 +54,7 @@ const router = createBrowserRouter([
     path: "/contact",
     element: (
       <>
-        <Navbar2 />
+        <Navbar />
         <Contact />
         <Footer />
       </>
@@ -65,7 +64,7 @@ const router = createBrowserRouter([
     path: "/products/:productId",
     element: (
       <>
-        <Navbar2 />
+        <Navbar />
         <SingleProduct />
         <Footer />
       </>
@@ -75,7 +74,7 @@ const router = createBrowserRouter([
     path: "/cart",
     element: (
       <>
-        <Navbar2 />
+        <Navbar />
         <Cart />
         <Footer />
       </>

@@ -5,7 +5,6 @@ import Shoes2 from "../assets/Shoes2.png";
 import Shoes3 from "../assets/Shoes3.png";
 import { motion, AnimatePresence, easeInOut } from "framer-motion";
 import { UpdateFollower } from "react-mouse-follower";
-import { div } from "framer-motion/client";
 
 const SlideRight = (delay) => {
   return {
@@ -83,7 +82,7 @@ function Hero() {
       <Navbar />
 
       {/* Hero Component */}
-      <div className="container grid grid-cols-1 md:grid-cols-2 min-h-151.25">
+      <div className="container grid grid-cols-1 md:grid-cols-2 min-h-151.25 py-30 md:py-40">
         {/* data info */}
         <div className="order-2 flex flex-col justify-center py-14 text-white md:order-1 md:py-0 xl:max-w-125">
           <div className="space-y-5 text-center md:text-left">

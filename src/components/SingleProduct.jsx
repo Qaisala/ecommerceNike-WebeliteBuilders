@@ -9,9 +9,9 @@ function SingleProduct() {
   const { productId } = useParams();
   const product = all_product.find((e) => e.id === Number(productId));
   return (
-    <div className="max-w-7xl mx-auto mb-32 mt-14">
+    <div className="max-w-7xl mb-32 mt-34 md:mx-3 lg:mx-3 xl:mx-auto">
       <Breadcrumbs product={product} />
-      <ProductDisplay product={product}/>
+      <ProductDisplay product={product} />
       <Description />
     </div>
   );

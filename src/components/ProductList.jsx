@@ -4,11 +4,11 @@ import Item from "./Item";
 
 function ProductList({ category }) {
   return (
-    <div className="mx-auto max-w-2xl px-4 py-16 sm:pt-24 lg:max-w-7xl lg:px-8">
+    <div className="mx-auto max-w-2xl px-4 sm:pt-24 lg:max-w-7xl lg:px-8 my-40 md:my-20">
       <h2 className="text-4xl font-bold tracking-tight text-gray-900 text-center font-serif">
         Top Sellers
       </h2>
-      <p className="text-center mt-3 md:px-56">
+      <p className="text-center mt-3 max-w-2xl mx-auto">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora,
         maiores maxime aspernatur omnis neque ullam? Minus iste voluptate
         quibusdam nobis?

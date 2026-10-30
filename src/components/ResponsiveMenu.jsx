@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 function ResponsiveMenu({ toggleMenu, setToggleMenu }) {
   return (
     <div
-      className={`fixed top-10 z-20 flex h-screen w-[75%] flex-col justify-between bg-white/50 backdrop:blur-sm px-8 pb-6 pt-16 text-black transition-all duration-200 md:hidden rounded-r-xl shadow-md ${toggleMenu ? "left-0" : "-left-full"}`}
+      className={`fixed top-10 z-20 flex h-screen w-[75%] flex-col justify-between bg-white/50 backdrop:blur-md px-8 pb-6 pt-16 text-black transition-all duration-200 md:hidden rounded-r-xl shadow-md ${toggleMenu ? "left-0" : "-left-full"}`}
     >
       <div>
         <div className="flex items-center justify-start gap-3">
