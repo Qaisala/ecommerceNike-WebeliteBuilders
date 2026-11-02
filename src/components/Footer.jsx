@@ -1,6 +1,7 @@
 import React from "react";
 import { FaFacebook, FaInstagram, FaYoutube } from "react-icons/fa";
 import { FaSquareXTwitter } from "react-icons/fa6";
+import { Link } from "react-router-dom";
 
 function Footer() {
   return (
@@ -17,11 +18,16 @@ function Footer() {
         {/* quick links */}
         <div>
           <h2 className="text-xl font-bold text-white mb-4">Quick Links</h2>
-          <ul className="space-y-2">
-            <li className="hover:text-white cursor-pointer">Home</li>
-            <li className="hover:text-white cursor-pointer">Shop</li>
-            <li className="hover:text-white cursor-pointer">About Us</li>
-            <li className="hover:text-white cursor-pointer">Contact</li>
+          <ul className="flex flex-col gap-1">
+            <Link to="/">
+              <li className="hover:text-white cursor-pointer">Home</li>
+            </Link>
+            <Link to="/contact">
+              <li className="hover:text-white cursor-pointer">Contact</li>
+            </Link>
+            <Link to="/contact">
+              <li className="hover:text-white cursor-pointer">About Us</li>
+            </Link>
           </ul>
         </div>
         {/* customer service */}
@@ -31,7 +37,9 @@ function Footer() {
           </h2>
           <ul className="space-y-2">
             <li className="hover:text-white cursor-pointer">FAQ</li>
-            <li className="hover:text-white cursor-pointer">Shipping & Returns</li>
+            <li className="hover:text-white cursor-pointer">
+              Shipping & Returns
+            </li>
             <li className="hover:text-white cursor-pointer">Size Guide</li>
             <li className="hover:text-white cursor-pointer">Track Order</li>
           </ul>

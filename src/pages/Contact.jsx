@@ -93,24 +93,24 @@ function Contact() {
               <div className="flex items-center gap-2 text-gray-950">
                 <MapPin fill="#33cccc" className="text-gray-900" />
                 <p>
-                  123 Business Avenue, <br />
-                  Nike city, Marketing State 12345
+                  123 xxxx xxxxx, <br />
+                  Nike city, Amman-Jordan
                 </p>
               </div>
               <div className="flex items-center gap-2 text-gray-950">
                 <Phone fill="#33cccc" className="text-gray-900" />
-                <p className="text-gray-950">phone: (123) 456-7890</p>
+                <p className="text-gray-950">phone: (+962) 788-888-888</p>
               </div>
               <div className="flex items-center gap-2 text-gray-950">
                 <MailPen fill="#33cccc" className="text-gray-900" />
-                <p className="text-gray-950">Email:contact@Nike.com</p>
+                <p className="text-gray-950">Email: qais@Nike.com</p>
               </div>
             </div>
             <div>
               {/* placeholder for google map  */}
               <div className="w-full h-64 bg-gray-300 rounded-lg">
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3682.1186056032384!2d88.32013047598572!3d22.64936607943719!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4d552f1bcc7d6f4f%3A0xd255053387b8dc4a!2sWebelite%20Builders!5e0!3m2!1sen!2sjo!4v1793163654535!5m2!1sen!2sjo"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3383.8046985091996!2d35.861723!3d31.993309399999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x151ca1c8a7b11e1f%3A0x4c649957c98962b3!2sWasfi%20At-Tall%20St.%2C%20Amman!5e0!3m2!1sen!2sjo!4v1793639220344!5m2!1sen!2sjo"
                   width="600"
                   height="450"
                   allowfullscreen=""
