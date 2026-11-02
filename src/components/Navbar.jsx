@@ -1,12 +1,12 @@
 import React, { useContext, useState } from "react";
 import Logo from "../assets/logo2.png";
 import { Link, useLocation } from "react-router-dom";
-import { ShoppingCart } from "lucide-react";
+import { ShoppingCart, X } from "lucide-react";
 import { FaRegUser } from "react-icons/fa";
 import { HiMenuAlt1, HiMenuAlt3 } from "react-icons/hi";
-import ResponsiveMenu from "./ResponsiveMenu";
 import { UpdateFollower } from "react-mouse-follower";
 import { ShopContext } from "../context/ShopContext";
+import { FaUserCircle } from "react-icons/fa";
 
 export const NavbarMenu = [
   { id: 1, title: "Home", link: "/" },
@@ -83,7 +83,10 @@ function Navbar() {
                   mixBlendMode: "difference",
                 }}
               >
-                <Link to="/cart" className="flex items-center relative py-2 px-2">
+                <Link
+                  to="/cart"
+                  className="flex items-center relative py-2 px-2"
+                >
                   <ShoppingCart className="w-6 h-6 hover:scale-105 transition-all duration-300 cursor-pointer" />
                   {cartItemCount > 0 && (
                     <div className="bg-gray-900 w-5 h-5 absolute -top-1 -right-1 flex items-center justify-center rounded-full text-white text-xs font-bold">
@@ -105,7 +108,10 @@ function Navbar() {
                   mixBlendMode: "difference",
                 }}
               >
-                <Link to="#" className="flex items-center text-xl py-2 px-2 hover:scale-105 transition-all duration-300">
+                <Link
+                  to="#"
+                  className="flex items-center text-xl py-2 px-2 hover:scale-105 transition-all duration-300"
+                >
                   <FaRegUser />
                 </Link>
               </UpdateFollower>
@@ -123,7 +129,7 @@ function Navbar() {
               </div>
             )}
           </Link>
-          
+
           {/* Mobile menu toggle */}
           {toggleMenu ? (
             <HiMenuAlt1
@@ -140,9 +146,69 @@ function Navbar() {
           )}
         </div>
       </div>
-      
-      <div>
-        <ResponsiveMenu toggleMenu={toggleMenu} setToggleMenu={setToggleMenu} />
+
+      {/*  MOBILE MENU */}
+      <div
+        className={`fixed top-0 z-50 flex h-screen w-[75%] flex-col justify-between bg-white backdrop-blur-md px-8 pb-6 pt-24 text-black transition-all duration-300 md:hidden rounded-r-2xl shadow-2xl ${
+          toggleMenu ? "left-0" : "-left-full"
+        }`}
+      >
+        <div>
+          {/* User profile section */}
+          <div className="flex items-center justify-between border-b border-gray-200 pb-6">
+            {/* Left group: Avatar and text */}
+            <div className="flex items-center gap-3">
+              <FaUserCircle size={50} className="text-[#138695]" />
+              <div>
+                <h1 className="font-bold text-gray-900">Hello User</h1>
+                <h1 className="text-sm text-slate-500">Premium User</h1>
+              </div>
+            </div>
+
+            {/* Right: Close button */}
+            <X
+              size={30}
+              onClick={() => setToggleMenu(!toggleMenu)}
+              className="transition-all cursor-pointer"
+            />
+          </div>
+
+          {/* Menu links */}
+          <nav className="mt-8">
+            <ul className="space-y-4 text-lg text-black flex flex-col">
+              {NavbarMenu.map((item, index) => (
+                <li key={index} onClick={() => setToggleMenu(false)}>
+                  <Link
+                    to={item.link}
+                    className="inline-block text-base font-semibold py-2 px-3 uppercase hover:text-[#138695] transition-colors"
+                  >
+                    {item.title}
+                  </Link>
+                </li>
+              ))}
+
+              {/* Optional: Add Cart to the mobile menu list */}
+              <li onClick={() => setToggleMenu(false)}>
+                <Link
+                  to="/cart"
+                  className="flex items-center justify-between text-base font-semibold py-2 px-3 uppercase hover:text-[#138695] transition-colors"
+                >
+                  <span>Cart</span>
+
+                  {/* Relative wrapper for the icon and absolute badge */}
+                  <span className="relative flex items-center">
+                    <ShoppingCart className="w-5 h-5" />
+                    {cartItemCount > 0 && (
+                      <span className="bg-gray-900 text-white text-xs w-5 h-5 absolute -top-2 -right-2 flex items-center justify-center rounded-full font-bold">
+                        {cartItemCount}
+                      </span>
+                    )}
+                  </span>
+                </Link>
+              </li>
+            </ul>
+          </nav>
+        </div>
       </div>
     </div>
   );

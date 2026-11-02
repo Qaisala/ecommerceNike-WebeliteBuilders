@@ -79,7 +79,7 @@ function Hero() {
       className="bg-brandDark text-white"
     >
       {/* Navbar component */}
-      <Navbar />
+      {/* <Navbar /> */}
 
       {/* Hero Component */}
       <div className="container grid grid-cols-1 md:grid-cols-2 min-h-151.25 py-30 md:py-40">
